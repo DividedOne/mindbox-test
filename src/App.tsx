@@ -79,7 +79,9 @@ function App() {
           </div>
         ))}
         <div className="flex items-center justify-between gap-10 p-2 text-sm text-gray-500">
-          <span>{todosLeftAmount} items left</span>
+          <span>
+            {todosLeftAmount} {todosLeftAmount === 1 ? "item" : "items"} left
+          </span>
           <div className="flex items-center gap-2">
             <button
               className={`${filter === "all" ? "outline outline-1 outline-gray-300/70" : ""} inline-flex rounded-lg px-2 py-1 hover:outline hover:outline-1 hover:outline-gray-300/70 focus-visible:outline focus-visible:outline-1 focus-visible:outline-gray-300/70`}
