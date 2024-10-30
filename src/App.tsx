@@ -36,6 +36,8 @@ function App() {
     }
   });
 
+  const todosLeftAmount = todos.filter((t) => !t.isCompleted).length;
+
   return (
     <main className="flex flex-col items-center gap-4">
       <h1 className="text-8xl font-thin text-gray-400">todos</h1>
@@ -46,7 +48,7 @@ function App() {
             type="text"
             placeholder="What needs to be done?"
             value={input}
-            onChange={(e) => setInput(e.currentTarget.value)}
+            onChange={(e) => setInput(e.target.value)}
             className="w-full border-none bg-transparent text-gray-700 placeholder:text-lg placeholder:italic placeholder:text-gray-300/80 focus-visible:ring-0"
           />
           <button
@@ -65,6 +67,7 @@ function App() {
             <input
               type="checkbox"
               checked={t.isCompleted}
+              aria-label={t.task}
               onChange={() => toggleTodo(t.id)}
               className="checkbox size-5 rounded-full border-gray-300/70 checked:border-gray-300/70"
             />
@@ -76,7 +79,7 @@ function App() {
           </div>
         ))}
         <div className="flex items-center justify-between gap-10 p-2 text-sm text-gray-500">
-          <span>0 items left</span>
+          <span>{todosLeftAmount} items left</span>
           <div className="flex items-center gap-2">
             <button
               className={`${filter === "all" ? "outline outline-1 outline-gray-300/70" : ""} inline-flex rounded-lg px-2 py-1 hover:outline hover:outline-1 hover:outline-gray-300/70 focus-visible:outline focus-visible:outline-1 focus-visible:outline-gray-300/70`}

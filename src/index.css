@@ -12,7 +12,7 @@
   }
 
   .todo-container {
-    @apply before:absolute before:-bottom-[6px] before:left-[4px] before:h-[6px] before:w-[calc(100%-8px)] before:border before:border-gray-300 before:bg-gray-200 after:absolute after:-bottom-[12px] after:left-[8px] after:h-[6px] after:w-[calc(100%-16px)] after:border after:border-gray-300 after:bg-gray-200;
+    @apply before:absolute before:-bottom-[6px] before:left-[4px] before:h-[6px] before:w-[calc(100%-8px)] before:border before:border-gray-300 before:bg-gray-100/90 after:absolute after:-bottom-[12px] after:left-[8px] after:h-[6px] after:w-[calc(100%-16px)] after:border after:border-gray-300 after:bg-gray-100/90;
   }
 
   .checkbox {
