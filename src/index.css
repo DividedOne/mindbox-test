@@ -16,6 +16,6 @@
   }
 
   .checkbox {
-    @apply bg-transparent outline-none ring-0 checked:bg-transparent checked:outline-none checked:ring-0 hover:bg-transparent hover:checked:bg-transparent focus:outline-none focus:ring-0 focus:checked:bg-transparent focus:checked:outline-none focus:checked:ring-0;
+    @apply bg-transparent outline-none ring-0 checked:bg-emerald-500 checked:outline-none checked:ring-0 hover:bg-transparent hover:checked:bg-emerald-500 focus:outline-none focus:ring-0 focus:checked:bg-emerald-500 focus:checked:outline-none focus:checked:ring-0;
   }
 }
